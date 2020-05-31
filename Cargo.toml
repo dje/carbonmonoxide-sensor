@@ -1,0 +1,30 @@
+[package]
+authors = ["Darrin Eden <darrin.eden@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+name = "gas-sensor"
+version = "0.1.0"
+
+[dependencies]
+ads1x1x = "0.2.0"
+cortex-m = "0.6.2"
+cortex-m-rt = "0.6.12"
+cortex-m-semihosting = "0.3.5"
+embedded-graphics = "0.6.2"
+embedded-hal = "0.2.3"
+f3 = "0.6.1"
+heapless = "0.5.5"
+nb = "0.1.2"
+panic-semihosting = "0.5.3"
+shared-bus = { version = "0.1.4", features = ["cortexm"] }
+ssd1306 = "0.3.1"
+
+[[bin]]
+name = "gas-sensor"
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
